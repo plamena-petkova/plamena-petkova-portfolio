@@ -14,20 +14,22 @@ const Navbar = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li><a className="text-lg hover:text-secondary cursor-pointer">Projects</a></li>
-                        <li><a className="text-lg hover:text-secondary cursor-pointer">Timeline</a></li>
-                        <li><a className="text-lg hover:text-secondary cursor-pointer">Skills</a></li>
-                        <li><a className="text-lg hover:text-secondary cursor-pointer">Certificates</a></li>
+                        <li><a href="#skills" className="text-lg hover:text-secondary cursor-pointer">Skills</a></li>
+                        <li><a href="#projects" className="text-lg hover:text-secondary cursor-pointer">Projects</a></li>
+                        <li><a href="#certificates" className="text-lg hover:text-secondary">Certificates</a></li>
+                        <li><a href="#timeline" className="text-lg hover:text-secondary cursor-pointer">Timeline</a></li>
                     </ul>
                 </div>
-                <a className="cursor-pointer hover:text-primary text-xl font-semibold">Plamena Petkova</a>
+                <a href='/' className="cursor-pointer hover:text-primary text-xl font-semibold">Plamena Petkova</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="flex flex-row gap-3">
-                    <li><a className="text-lg hover:text-secondary hover:link cursor-pointer">Projects</a></li>
-                    <li><a className="text-lg hover:text-secondary hover:link cursor-pointer">Timeline</a></li>
-                    <li><a className="text-lg hover:text-secondary hover:link cursor-pointer">Skills</a></li>
-                    <li><a className="text-lg hover:text-secondary hover:link cursor-pointer">Certificates</a></li>
+                    <li><a href='#skills' className="text-lg hover:text-secondary hover:link cursor-pointer">Skills</a></li>
+                    <li><a href='#projects' className="text-lg hover:text-secondary hover:link cursor-pointer">Projects</a></li>
+                    <li><a href='#certificates' className="text-lg hover:text-secondary hover:link">Certificates</a></li>
+                    <li><a href="#timeline" className="text-lg hover:text-secondary hover:link cursor-pointer">Timeline</a></li>
+
+
                 </ul>
             </div>
             <div className="navbar-end gap-1">

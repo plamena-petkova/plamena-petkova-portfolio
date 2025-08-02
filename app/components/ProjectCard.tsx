@@ -4,7 +4,7 @@ import MotionGestureContainer from '../animations/MotionGestureContainer';
 const ProjectCard = () => {
     return (
         <MotionGestureContainer>
-            <div className="card bg-base-300 w-96 shadow-sm mt-10">
+            <div className="card bg-base-300 w-84 shadow-sm mt-10">
                 <figure>
                     <img
                         src="/rocket-generic-pic.svg"

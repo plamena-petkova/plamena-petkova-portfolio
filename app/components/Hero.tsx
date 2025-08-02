@@ -4,6 +4,7 @@ import MotionGestureContainer from '../animations/MotionGestureContainer';
 
 
 
+
 const Hero = () => {
     return (
         <MotionContainer >

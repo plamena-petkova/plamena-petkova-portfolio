@@ -2,9 +2,9 @@ import React from 'react';
 
 const Timeline = () => {
     return (
-        <div className='mt-10'>
-        <div className="flex w-full flex-col">
-            <h1 className='divider text-3xl text-primary text-center font-semibold'>Timeline</h1>
+        <div id='timeline' className='mt-10'>
+            <div className="flex w-full flex-col">
+                <h1 className='divider text-3xl text-primary text-center font-semibold'>Timeline</h1>
             </div>
             <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
                 <li>
