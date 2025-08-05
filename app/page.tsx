@@ -1,5 +1,4 @@
 'use client'
-import { supabase } from "@/lib/supabase";
 import Certificates from "./components/Certificates";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";

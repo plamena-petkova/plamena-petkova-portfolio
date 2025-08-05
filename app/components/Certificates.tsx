@@ -3,7 +3,6 @@ import UsePresenceData from '../animations/MotionCarousel';
 
 const Certificates = () => {
 
-
     const items = [
         "/certificates/NextjsCertificate.jpg",
         "/certificates/CSSCertificate.jpg",
