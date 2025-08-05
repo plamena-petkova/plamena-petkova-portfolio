@@ -1,32 +1,38 @@
 import React from 'react';
 import MotionGestureContainer from '../animations/MotionGestureContainer';
+import { ProjectProps } from '@/store/projectStore';
+import Link from 'next/link';
 
-const ProjectCard = () => {
+const ProjectCard = (project: ProjectProps) => {
+
+    const techStackArray = project.techStack[0].split(',');
+
+
     return (
         <MotionGestureContainer>
-            <div className="card bg-base-300 w-84 shadow-sm mt-10">
-                <figure>
+            <div className="card bg-base-300 w-84 h-[36rem] shadow-sm mt-10">
+                <figure className="h-48 overflow-hidden">
                     <img
-                        src="/rocket-generic-pic.svg"
+                        className="w-full h-full object-cover"
+                        src={project.picture ? project.picture : "/rocket-generic-pic.svg"}
                         alt="project-pic" />
                 </figure>
-                <div className="card-body">
-                    <h2 className="card-title mt-2">Card Title</h2>
-                    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                    <div className="card-actions justify-start">
-                        <p className="badge badge-outline ">Typescript</p>
-                        <p className="badge badge-outline">Nextjs</p>
-                        <p className="badge badge-outline">Primary</p>
-                        <p className="badge badge-outline">Primary</p>
-                        <p className="badge badge-outline">Primary</p>
-                        <p className="badge badge-outline">Primary</p>
-                        <p className="badge badge-outline">Primary</p>
-                        <p className="badge badge-outline">Primary</p>
-                        <p className="badge badge-outline">Primary</p>
+                <div className="card-body w-84">
+                    <div className="flex flex-col justify-between h-[20rem]">
+                        <div className="flex flex-col justify-between">
+                            <h2 className="card-title mt-2">{project.title}</h2>
+                            <p>{project.overview}</p>
+                            <div className="card-actions flex-wrap gap-1 mt-2">
+                                {techStackArray.map((stack: string, index: number) => {
+                                    return <p key={index} className="badge badge-outline ">{stack}</p>
+                                })}
 
-                    </div>
-                    <div className="card-actions mt-3">
-                        <button className="btn btn-primary">Details</button>
+                            </div>
+                        </div>
+                        <div className="card-actions mt-2">
+                            <Link href={`/projects/${project.id}`} className="btn btn-primary">Details</Link>
+                            <Link className='btn btn-secondary' href={project.liveDemo} target='_blank'>Live Demo</Link>
+                        </div>
                     </div>
                 </div>
             </div>

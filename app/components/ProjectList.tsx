@@ -1,8 +1,22 @@
-import React from 'react';
+'use client'
+import React, { useEffect } from 'react';
 import ProjectCard from './ProjectCard';
 import MotionContainer from '../animations/MotionContainer';
+import { useProjectsStore } from '@/store/projectStore';
 
 const ProjectList = () => {
+
+
+    const { projects, loading, error, fetchItems } = useProjectsStore();
+
+    useEffect(() => {
+        fetchItems();
+    }, [fetchItems]);
+
+    if (loading) return <div className="flex items-center"><span className="loading loading-ball loading-xs"></span></div>;
+    if (error) return <p>Error: {error}</p>;
+
+
     return (
         <MotionContainer >
             <div id='projects' className='mt-10'>
@@ -11,11 +25,10 @@ const ProjectList = () => {
                 </div>
                 <div className="flex justify-center ">
                     <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 gap-20">
-                        <ProjectCard />
-                        <ProjectCard />
-                        <ProjectCard />
-                        <ProjectCard />
-                        <ProjectCard />
+                       {projects.map((project) => {
+                        return <ProjectCard key={project.id} {...project} />
+                       })} 
+                       
                     </div>
                 </div>
             </div>

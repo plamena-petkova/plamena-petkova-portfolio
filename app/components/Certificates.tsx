@@ -5,9 +5,10 @@ const Certificates = () => {
 
 
     const items = [
+        "/certificates/NextjsCertificate.jpg",
+        "/certificates/CSSCertificate.jpg",
         "/certificates/GithubActionCertificate.jpg",
         "/certificates/JestCertificate.jpg",
-        "/certificates/NextjsCertificate.jpg",
         "/certificates/AngularCertificate.jpeg",
         "/certificates/HTMLCSSCertificate.jpeg",
         "/certificates/JSAdvancedCertificate.jpeg",

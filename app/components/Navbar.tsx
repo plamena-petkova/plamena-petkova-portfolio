@@ -1,9 +1,12 @@
 import React from 'react';
 import { FaGithub } from "react-icons/fa";
+import { FaCode } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import MotionGestureContainer from '../animations/MotionGestureContainer';
 
+
 const Navbar = () => {
+
     return (
         <div className="navbar bg-base-100 shadow-lg">
             <div className="navbar-start">
@@ -20,7 +23,10 @@ const Navbar = () => {
                         <li><a href="#timeline" className="text-lg hover:text-secondary cursor-pointer">Timeline</a></li>
                     </ul>
                 </div>
-                <a href='/' className="cursor-pointer hover:text-primary text-xl font-semibold">Plamena Petkova</a>
+                <div className="flex flex-row items-center">
+                <a href='/' className="cursor-pointer hover:text-primary text-xl font-semibold mr-2">Plamena Petkova</a>
+                <a href='https://github.com/plamena-petkova/plamena-petkova-portfolio' target='_blank'><FaCode className='hover:text-primary' size={24} /></a>
+                </div>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="flex flex-row gap-3">

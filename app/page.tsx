@@ -1,4 +1,5 @@
 'use client'
+import { supabase } from "@/lib/supabase";
 import Certificates from "./components/Certificates";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
@@ -7,7 +8,7 @@ import ProjectList from "./components/ProjectList";
 import Skills from "./components/Skills";
 import Timeline from "./components/Timeline";
 import { FaArrowUp } from "react-icons/fa";
-import { useInView, defaultFallbackInView } from "react-intersection-observer";
+import { useInView } from "react-intersection-observer";
 
 
 export default function Home() {
