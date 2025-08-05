@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <div className="bg-base-100">
       <div ref={ref}>
-        <Navbar />
+        <Navbar isHome />
       </div>
       {!inView && (
         <button

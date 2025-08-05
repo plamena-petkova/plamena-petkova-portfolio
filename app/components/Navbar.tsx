@@ -4,13 +4,16 @@ import { FaCode } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import MotionGestureContainer from '../animations/MotionGestureContainer';
 
+type NavbarProps = {
+    isHome:boolean
+}
 
-const Navbar = () => {
+const Navbar = ({ isHome }: NavbarProps) => {
 
     return (
         <div className="navbar bg-base-100 shadow-lg">
             <div className="navbar-start">
-                <div className="dropdown">
+                {isHome && <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
                     </div>
@@ -22,13 +25,13 @@ const Navbar = () => {
                         <li><a href="#certificates" className="text-lg hover:text-secondary">Certificates</a></li>
                         <li><a href="#timeline" className="text-lg hover:text-secondary cursor-pointer">Timeline</a></li>
                     </ul>
-                </div>
+                </div>}
                 <div className="flex flex-row items-center">
-                <a href='/' className="cursor-pointer hover:text-primary text-xl font-semibold mr-2">Plamena Petkova</a>
-                <a href='https://github.com/plamena-petkova/plamena-petkova-portfolio' target='_blank'><FaCode className='hover:text-primary' size={24} /></a>
+                    <a href='/' className="cursor-pointer hover:text-primary text-xl font-semibold mr-2">Plamena Petkova</a>
+                    <a href='https://github.com/plamena-petkova/plamena-petkova-portfolio' target='_blank' rel="noopener noreferrer"><FaCode className='hover:text-primary' size={24} /></a>
                 </div>
             </div>
-            <div className="navbar-center hidden lg:flex">
+            {isHome && <div className="navbar-center hidden lg:flex">
                 <ul className="flex flex-row gap-3">
                     <li><a href='#skills' className="text-lg hover:text-secondary hover:link cursor-pointer">Skills</a></li>
                     <li><a href='#projects' className="text-lg hover:text-secondary hover:link cursor-pointer">Projects</a></li>
@@ -37,10 +40,11 @@ const Navbar = () => {
 
 
                 </ul>
-            </div>
+            </div>}
+
             <div className="navbar-end gap-1">
-                <MotionGestureContainer><a href='https://github.com/plamena-petkova' target='_blank' className="btn btn-ghost"><FaGithub size={30} /></a></MotionGestureContainer>
-                <MotionGestureContainer><a href='https://www.linkedin.com/in/plamena-petkova-a1280163/' target='_blank' className="btn btn-ghost"><FaLinkedin size={30} /></a></MotionGestureContainer>
+                <MotionGestureContainer><a href='https://github.com/plamena-petkova' target='_blank' rel="noopener noreferrer" className="btn btn-ghost"><FaGithub size={30} /></a></MotionGestureContainer>
+                <MotionGestureContainer><a href='https://www.linkedin.com/in/plamena-petkova-a1280163/' target='_blank' rel="noopener noreferrer" className="btn btn-ghost"><FaLinkedin size={30} /></a></MotionGestureContainer>
             </div>
         </div>
     );

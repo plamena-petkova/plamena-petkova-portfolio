@@ -7,11 +7,11 @@ import { useProjectsStore } from '@/store/projectStore';
 const ProjectList = () => {
 
 
-    const { projects, loading, error, fetchItems } = useProjectsStore();
+    const { projects, loading, error, fetchProjects } = useProjectsStore();
 
     useEffect(() => {
-        fetchItems();
-    }, [fetchItems]);
+        fetchProjects();
+    }, [fetchProjects]);
 
     if (loading) return <div className="flex items-center"><span className="loading loading-ball loading-xs"></span></div>;
     if (error) return <p>Error: {error}</p>;

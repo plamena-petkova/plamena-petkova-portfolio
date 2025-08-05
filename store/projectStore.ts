@@ -7,9 +7,9 @@ export type ProjectProps = {
   created_at: string;
   title: string;
   overview: string;
-  descritpion: string;
+  description: string;
   techStack: string[];
-  gitRepos: gitReposProps;
+  gitRepos: gitReposProps[];
   liveDemo: string;
   picture: string;
   developer: string;
@@ -24,7 +24,7 @@ type ProjectStore = {
   projects: ProjectProps[];
   loading: boolean;
   error: string | null;
-  fetchItems: () => Promise<void>;
+  fetchProjects: () => Promise<void>;
 };
 
 
@@ -35,7 +35,7 @@ export const useProjectsStore = create<ProjectStore>()(
       loading: false,
       error: null,
 
-      fetchItems: async () => {
+      fetchProjects: async () => {
         set({ loading: true, error: null });
 
         const { data, error } = await supabase.from("projects").select("*");
