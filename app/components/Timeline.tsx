@@ -26,7 +26,7 @@ const Timeline = () => {
                         <time className="font-mono italic">2000-2005</time>
                         <div className="text-lg font-black">Math HighSchool</div>
                         Math School
-                        I've developed expertise in both Mathematics and Informatics. I actively participated in math competitions during my school years.
+                        I&apos;ve developed expertise in both Mathematics and Informatics. I actively participated in math competitions during my school years.
                     </div>
                     <hr />
                 </li>
@@ -50,7 +50,7 @@ const Timeline = () => {
                         <time className="font-mono italic">2005-2009</time>
                         <div className="text-lg font-black">UNWE-University of National and World Economy</div>
                         iMac is a family of all-in-one Mac desktop computers designed and built by Apple Inc. It has
-                        been the primary part of Apple's consumer desktop offerings since its debut in August 1998,
+                        been the primary part of Apple&apos;s consumer desktop offerings since its debut in August 1998,
                         and has evolved through seven distinct forms
                     </div>
                     <hr />

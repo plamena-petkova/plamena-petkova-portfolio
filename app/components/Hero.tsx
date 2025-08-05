@@ -8,10 +8,10 @@ const Hero = () => {
             <div className="hero bg-base-100 mt-0 lg:mt-12 md:mt-12">
                 <div className="hero-content flex-col lg:flex-row">
                     <div>
-                        <h3 className="font-semibold">Hey there, I'm a</h3>
+                        <h3 className="font-semibold">Hey there, I&apos;m a</h3>
                         <h1 className="text-4xl font-semibold text-primary">Frontend developer</h1>
                         <h2 className="text-xl font-semibold">with a passion for creating and refining digital products.</h2>
-                        <p className='mt-3 mb-4 text-sm'> I care deeply about the details — not just making things work, but making them feel right. I’m always learning, always tweaking, and always aiming to turn ideas into something clean, useful, and real.</p>
+                        <p className='mt-3 mb-4 text-sm'> I care deeply about the details — not just making things work, but making them feel right. I&apos;m always learning, always tweaking, and always aiming to turn ideas into something clean, useful, and real.</p>
                         <button className="btn btn-primary mt-3">Resume</button>
                     </div>
                     <MotionGestureContainer>

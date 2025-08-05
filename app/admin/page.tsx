@@ -1,6 +1,7 @@
 'use client'
 import { supabase } from '@/lib/supabase';
 import { AuthError } from '@supabase/supabase-js';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 
@@ -51,7 +52,7 @@ const AdminPage = () => {
                     <input onChange={(e) => setCredentials({...credentials, password:e.target.value})} value={credentials.password} name='password' type="password" className="input" placeholder="password" />
 
                     <button onClick={() => handleLogin(credentials)} className='btn btn-primary mt-2'>Login</button>
-                    <a href='/' className='btn btn-secondary btn-outline mt-2'>Home</a>
+                    <Link href='/' className='btn btn-secondary btn-outline mt-2'>Home</Link>
                 </fieldset>
             </div>
         </>
