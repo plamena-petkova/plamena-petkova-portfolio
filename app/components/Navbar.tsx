@@ -6,7 +6,7 @@ import MotionGestureContainer from '../animations/MotionGestureContainer';
 import Link from 'next/link';
 
 type NavbarProps = {
-    isHome:boolean
+    isHome: boolean
 }
 
 const Navbar = ({ isHome }: NavbarProps) => {
