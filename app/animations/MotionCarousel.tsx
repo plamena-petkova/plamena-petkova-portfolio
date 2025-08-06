@@ -1,7 +1,8 @@
 "use client";
 
 import { AnimatePresence, motion, usePresenceData } from "motion/react";
-import { forwardRef, useState, SVGProps} from "react";
+import Image from "next/image";
+import { forwardRef, useState, SVGProps } from "react";
 
 interface Props {
   items: string[];
@@ -72,7 +73,9 @@ const Slide = forwardRef<HTMLDivElement, SlideProps>(({ src }, ref) => {
       exit={{ opacity: 0, x: direction * -50 }}
       className="aspect-[3/4] w-full max-w-lg rounded-xl overflow-hidden shadow-lg bg-base-100"
     >
-      <img
+      <Image
+        width={300}
+        height={600}
         src={src}
         alt="Certificate"
         className="w-full h-full object-contain"

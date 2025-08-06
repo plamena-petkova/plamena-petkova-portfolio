@@ -29,7 +29,7 @@ const Navbar = ({ isHome }: NavbarProps) => {
                 </div>}
                 <div className="flex flex-row items-center">
                     <Link href='/' className="cursor-pointer hover:text-primary text-xl font-semibold mr-2">Plamena Petkova</Link>
-                    <a href='https://github.com/plamena-petkova/plamena-petkova-portfolio' target='_blank' rel="noopener noreferrer"><FaCode className='hover:text-primary' size={24} /></a>
+                    <a aria-label='source-code' href='https://github.com/plamena-petkova/plamena-petkova-portfolio' target='_blank' rel="noopener noreferrer"><FaCode className='hover:text-primary' size={24} /></a>
                 </div>
             </div>
             {isHome && <div className="navbar-center hidden lg:flex">
@@ -44,8 +44,8 @@ const Navbar = ({ isHome }: NavbarProps) => {
             </div>}
 
             <div className="navbar-end gap-1">
-                <MotionGestureContainer><a href='https://github.com/plamena-petkova' target='_blank' rel="noopener noreferrer" className="btn btn-ghost"><FaGithub size={30} /></a></MotionGestureContainer>
-                <MotionGestureContainer><a href='https://www.linkedin.com/in/plamena-petkova-a1280163/' target='_blank' rel="noopener noreferrer" className="btn btn-ghost"><FaLinkedin size={30} /></a></MotionGestureContainer>
+                <MotionGestureContainer><a aria-label='github-icon' href='https://github.com/plamena-petkova' target='_blank' rel="noopener noreferrer" className="btn btn-ghost"><FaGithub size={30} /></a></MotionGestureContainer>
+                <MotionGestureContainer><a aria-label='linkedin-icon' href='https://www.linkedin.com/in/plamena-petkova-a1280163/' target='_blank' rel="noopener noreferrer" className="btn btn-ghost"><FaLinkedin size={30} /></a></MotionGestureContainer>
             </div>
         </div>
     );

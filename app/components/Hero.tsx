@@ -1,6 +1,7 @@
 import React from 'react';
 import MotionContainer from '../animations/MotionContainer';
 import MotionGestureContainer from '../animations/MotionGestureContainer';
+import Image from 'next/image';
 
 const Hero = () => {
     return (
@@ -17,12 +18,12 @@ const Hero = () => {
                     <MotionGestureContainer>
                         <div className="avatar">
                             <div className="ring-primary ring-offset-base-100 w-56 rounded-full ring-2 ring-offset-2">
-                                <img
+                                <Image
                                     src="/profile-avatar.png"
                                     width={200}
                                     height={200}
                                     alt="profile-pic"
-                                    loading="eager"
+                                    priority
                                 />
                             </div>
                         </div>

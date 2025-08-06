@@ -2,6 +2,7 @@ import React from 'react';
 import MotionGestureContainer from '../animations/MotionGestureContainer';
 import { ProjectProps } from '@/store/projectStore';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const ProjectCard = (project: ProjectProps) => {
 
@@ -12,7 +13,9 @@ const ProjectCard = (project: ProjectProps) => {
         <MotionGestureContainer>
             <div className="card bg-base-300 w-84 h-[36rem] shadow-sm mt-10">
                 <figure className="h-48 overflow-hidden">
-                    <img
+                    <Image
+                        width={200}
+                        height={130}
                         className="w-full h-full object-cover"
                         src={project.picture ? project.picture : "/rocket-generic-pic.svg"}
                         alt="project-pic" />
