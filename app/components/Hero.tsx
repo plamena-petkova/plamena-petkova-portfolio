@@ -19,7 +19,7 @@ const Hero = () => {
                         <div className="avatar">
                             <div className="ring-primary ring-offset-base-100 w-56 rounded-full ring-2 ring-offset-2">
                                 <Image
-                                    src="/profile-avatar.png"
+                                    src="/plamena-petkova-profile-picture.png"
                                     width={200}
                                     height={200}
                                     alt="profile-pic"

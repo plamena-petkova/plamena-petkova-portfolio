@@ -27,7 +27,6 @@ type ProjectStore = {
   fetchProjects: () => Promise<void>;
 };
 
-
 export const useProjectsStore = create<ProjectStore>()(
   persist(
     (set) => ({
@@ -38,7 +37,10 @@ export const useProjectsStore = create<ProjectStore>()(
       fetchProjects: async () => {
         set({ loading: true, error: null });
 
-        const { data, error } = await supabase.from("projects").select("*");
+        const { data, error } = await supabase
+          .from("projects")
+          .select("*")
+          .order("id", { ascending:true });
 
         if (error) {
           set({ error: error.message, loading: false });
@@ -48,8 +50,8 @@ export const useProjectsStore = create<ProjectStore>()(
       },
     }),
     {
-      name: "projects-storage", 
-      storage: createJSONStorage(() => sessionStorage), 
+      name: "projects-storage",
+      storage: createJSONStorage(() => sessionStorage),
     }
   )
 );
