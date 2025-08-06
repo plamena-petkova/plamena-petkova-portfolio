@@ -2,6 +2,7 @@ import React from 'react';
 import MotionContainer from '../animations/MotionContainer';
 import MotionGestureContainer from '../animations/MotionGestureContainer';
 import Image from 'next/image';
+import ButtonDownload from './ButtonDownload';
 
 const Hero = () => {
     return (
@@ -13,7 +14,7 @@ const Hero = () => {
                         <h1 className="text-4xl font-semibold text-primary">Frontend developer</h1>
                         <h2 className="text-xl font-semibold">with a passion for creating and refining digital products.</h2>
                         <p className='mt-3 mb-4 text-sm'> I care deeply about the details — not just making things work, but making them feel right. I&apos;m always learning, always tweaking, and always aiming to turn ideas into something clean, useful, and real.</p>
-                        <button className="btn btn-primary mt-3">Resume</button>
+                        <ButtonDownload />
                     </div>
                     <MotionGestureContainer>
                         <div className="avatar">
