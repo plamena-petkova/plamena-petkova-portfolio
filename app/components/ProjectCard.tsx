@@ -34,7 +34,7 @@ const ProjectCard = (project: ProjectProps) => {
                         </div>
                         <div className="card-actions mt-2">
                             <Link href={`/projects/${project.id}`} className="btn btn-primary">Details</Link>
-                            <Link className='btn btn-secondary' href={project.liveDemo} target='_blank'>Live Demo</Link>
+                            {project.liveDemo && <Link className='btn btn-secondary' href={project?.liveDemo} target='_blank'>Live Demo</Link>}
                         </div>
                     </div>
                 </div>
