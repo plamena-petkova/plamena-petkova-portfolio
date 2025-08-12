@@ -86,7 +86,7 @@ const ProjectDetails = () => {
 
                         </div>
                         <div className="mt-6 flex flex-row gap-2 items-center">
-                            <FaLink size={24} /> <a target="_blank" rel="noopener noreferrer" className="link link-hover text-primary" href={project.liveDemo}>Live Demo</a>
+                            {project.liveDemo && <><FaLink size={24} /> <a target="_blank" rel="noopener noreferrer" className="link link-hover text-primary" href={project.liveDemo}>Live Demo</a></>}
                         </div>
                     </div>
                 )}
